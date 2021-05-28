@@ -18,7 +18,7 @@ public class WindowManager implements FlutterPlugin {
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
-    channel = new MethodChannel(binding.getWindow, "flutter_windowmanager");
+    channel = new MethodChannel(binding.getApplicationContext(), "flutter_windowmanager");
     channel.setMethodCallHandler(this);
   }
 
